@@ -1,149 +1,149 @@
-# 📊 Quilombo UK – Data Analysis Project
+# UK Underemployment Analysis (2021–2022) 📊
 
-## 📌 Overview
+## 🔎 Project Overview
 
-This project investigates the factors associated with **underemployment in the United Kingdom**, using data from **Understanding Society (UKHLS)** for the **2021 and 2022** calendar years.
+This repository investigates patterns and determinants of **underemployment in the United Kingdom** during 2021 and 2022, using data from **Understanding Society (UKHLS)**.
 
-Underemployment is defined as a **mismatch between individuals’ potential (skills, qualifications, desired hours, or wage expectations) and the work they actually perform**. Although often invisible in standard labour statistics, underemployment has profound implications for:
-
-- social mobility  
-- income  
-- career progression  
-- mental health and well-being  
-
-This project develops and analyses indicators of underemployment across demographic groups, with particular attention to **gender** and **migration status**.
+Underemployment refers to individuals who are working but **not in jobs that match their skills, qualifications, preferred hours, or wage expectations**. It has strong effects on social mobility, income stability, job satisfaction, and mental well-being.  
+This project builds multi-dimensional indicators of underemployment and analyses differences by **gender**, **migration status**, **education**, and other demographic characteristics.
 
 ---
 
-## 🧭 Project Workflow
+## 🧭 Workflow & Repository Structure
 
-### **1. Data Extraction**
-Relevant variables were extracted from the 2021 and 2022 waves of UKHLS. Columns include:
-
-- employment status  
-- education  
-- occupation  
-- hours worked  
-- wages  
-- well-being & satisfaction measures  
-
-Additional migration-related variables were sourced from the **sub_data** files.
 
 ---
 
-### **2. Data Cleaning & Merging**
+## 📄 Conceptual Framework: Understanding Underemployment
 
-Two main notebooks prepare the data:
+Underemployment is multi-dimensional. This project considers the following forms:
 
-- **main_data_edit.ipynb** – cleans each year's dataset and aligns variable names  
-- **sub_data_edit.ipynb** – processes immigration-related variables  
+### **1. Skills Underemployment (Overqualification)**
+When individuals possess higher education or skill levels than required for their job.
 
-After cleaning, datasets for **2021** and **2022** are merged to create a unified analytical dataset.
+### **2. Wage Underemployment**
+When individuals earn less than expected given their education, occupation, or experience.
 
----
+### **3. Combined / Multiple Underemployment**
+When two or more disadvantages are experienced simultaneously (e.g., low pay and skills mismatch).
 
-### **3. Analysis**
+### **4. Perceived Underemployment**
+Based on self-reported job satisfaction, desire for more hours, dissatisfaction with pay, etc.
 
-All analytical procedures are contained in:
-
-- **analysis.ipynb** –  
-  Includes construction of underemployment indicators, descriptive statistics, subgroup comparisons, and outcome assessments.
-
----
-
-## 🧠 Conceptual Background: What Is Underemployment?
-
-Underemployment occurs when individuals are working **below their potential**. This includes mismatches in skills, pay, hours, and job quality.
-
-### **Types of Underemployment**
-
-#### 🔹 Skills Underemployment (Overqualification)
-When an individual's education or skills exceed the job requirements  
-➡ Example: A university graduate working in a low-skilled role.
-
-#### 🔹 Wage Underemployment
-When hourly pay is lower than expected given one’s occupation, education, or labour market norms.
-
-#### 🔹 Multiple or Combined Underemployment
-Experiencing two or more disadvantages at the same time  
-(e.g., low pay **and** working below skill level).
-
-Underemployment is typically **involuntary** and is associated with:
-
-- career stagnation  
-- financial insecurity  
-- poorer mental health  
-- reduced job satisfaction  
+These types capture labour market disadvantage that does **not** appear in standard employment metrics.
 
 ---
 
 ## 👥 Study Population
 
-### **Inclusion Criteria: Individuals who:**
-- are aged **16–64**  
-- are **employed or self-employed** at the time of the survey  
-- provide valid data on education, occupation, hours, or wages  
-- report **paid work** during the reference period  
-- provide information relevant to underemployment or job satisfaction  
+### **Inclusion Criteria**
+Individuals who:
+- are aged **16–64**
+- are **employed or self-employed**
+- provide valid data on occupation, wages, hours, or education
+- report **paid work** in the reference period
+- provide variables relevant to underemployment indicators
 
 ### **Exclusion Criteria**
-Exclude individuals who are:
-
-- full-time students whose main activity is study  
-- retired or above statutory retirement age  
-- working under external hour restrictions (e.g., visa limits)  
-- voluntarily part-time and satisfied with their hours  
-- unpaid family workers or volunteers  
+Exclude:
+- full-time students not primarily working
+- retired or above statutory retirement age
+- workers constrained by external hour restrictions (e.g., visa limits)
+- voluntarily part-time individuals satisfied with their hours
+- unpaid family workers or volunteers
 
 ---
 
-## 🧩 Key Indicators to Construct
+## 📊 Running the Analysis
 
-### **Goals**
-- Develop consistent measures of underemployment  
-- Test reliability across demographic groups  
-- Compare indicators across years (2021–2022)
+### **Step 1 — Data Cleaning**
+Run the following:
+
+- **main_data_edit.ipynb**  
+  → Cleans and aligns the 2021 & 2022 datasets  
+
+- **sub_data_edit.ipynb**  
+  → Processes immigration/migration-related variables  
+
+---
+
+### **Step 2 — Merging & Final Dataset**
+After cleaning, datasets from both notebooks are merged to produce a unified analytical dataset.
+
+---
+
+### **Step 3 — Analysis**
+`analysis.ipynb` includes:
+
+- construction of underemployment indicators  
+- descriptive statistics  
+- subgroup comparisons (gender, migration status, education, etc.)  
+- relationships with mental health and job satisfaction  
+
+---
+
+## 🧩 Key Indicators & Validation Tasks
 
 ### **Indicators**
-- **Skills mismatch**  
-- **Wage mismatch**  
-- **Combined/multiple underemployment**  
-- **Perceived underemployment** (using satisfaction variables)
+- Skills mismatch  
+- Wage mismatch  
+- Combined underemployment  
+- Perceived underemployment  
 
 ### **Validation Tasks**
-- Verify logical consistency  
-- Check frequencies by demographic subgroup  
-- Investigate discrepancies between waves  
+- Check logical consistency across years  
+- Identify subgroup disparities  
+- Assess stability of measures across 2021–2022  
+- Verify completeness and accuracy of variables  
 
 ---
 
-## 📈 Descriptive Analysis
+## 📈 Descriptive Analysis Goals
 
-### **Goals**
-- Document patterns of underemployment in the UK  
-- Identify differences across demographic groups  
-- Explore relationships between underemployment, job satisfaction, and well-being  
-
-### **Tasks**
-
-#### 👤 Profile underemployment by:
+### **Compare underemployment by:**
 - gender  
 - migration status  
 - education  
 - disability status  
 
-#### 🧠 Explore associations with:
-- mental health indicators  
-- job satisfaction (overall + specific dimensions)  
+### **Compare forms of underemployment**
+- skills mismatch  
+- wage mismatch  
+- combined underemployment  
 
-#### 🧹 Additional tasks:
-- Compare different forms of underemployment  
-- Record variable inconsistencies across years  
+### **Examine associations with:**
+- mental health indicators  
+- job satisfaction (overall and domain-specific)  
+
+Also:  
+- Note inconsistencies across years for future cleaning improvements  
 
 ---
 
-If you'd like, I can also:  
-✅ Add a **table of contents**  
-✅ Add **badges**, visuals, or graphs  
-✅ Create a **Methods** or **Findings** section  
-Just tell me!
+## 🧑‍💻 How to Extend This Project
+
+You may extend or reuse this project by:
+
+- adding more UKHLS waves for multi-year trends  
+- performing longitudinal or panel regression analysis  
+- building data visualizations or dashboards  
+- expanding demographic breakdowns  
+- applying machine learning for prediction or clustering  
+
+---
+
+## 📚 Acknowledgments
+- Data source: **Understanding Society – UK Household Longitudinal Study (UKHLS)**  
+- Methodological practices follow standard guidelines for transparent academic data workflows.  
+
+---
+
+## 📝 License & Notes
+This project is intended for research and educational use.  
+If you reuse or cite this work, please credit the original author.
+
+---
+
+## 🙋 Author
+**Hanzecode**  
+GitHub: https://github.com/Hanzecode
