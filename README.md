@@ -120,18 +120,6 @@ Also:
 
 ---
 
-## 🧑‍💻 How to Extend This Project
-
-You may extend or reuse this project by:
-
-- adding more UKHLS waves for multi-year trends  
-- performing longitudinal or panel regression analysis  
-- building data visualizations or dashboards  
-- expanding demographic breakdowns  
-- applying machine learning for prediction or clustering  
-
----
-
 ## 📚 Acknowledgments
 - Data source: **Understanding Society – UK Household Longitudinal Study (UKHLS)**  
 - Methodological practices follow standard guidelines for transparent academic data workflows.  
